@@ -1,0 +1,236 @@
+local player = game.Players.LocalPlayer
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Sane Hub MADE BY KEP", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "FPS changer",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+OrionLib:MakeNotification({
+	Name = "Credits",
+	Content = "Made by kep",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
+Tab:AddButton({
+	Name = "1000 FPS",
+	Callback = function()
+		-- Function to spoof FPS display
+		local function spoofFPS(targetFPS, updateFrequency)
+			-- Variables
+			local Players = game:GetService("Players")
+			local player = Players.LocalPlayer
+			local character = player.Character or player.CharacterAdded:Wait()
+			local head = character:WaitForChild("Head")
+			
+			-- Find or create BillboardGui
+			local billboardGui = head:FindFirstChildWhichIsA("BillboardGui")
+			if not billboardGui then
+				billboardGui = Instance.new("BillboardGui", head)
+				billboardGui.Size = UDim2.new(3, 0, 3, 0)
+				billboardGui.StudsOffset = Vector3.new(0, 2, 0)
+				billboardGui.Adornee = head
+			end
+
+			-- Find or create the TextLabel
+			local fpsLabel = billboardGui:FindFirstChildWhichIsA("TextLabel")
+			if not fpsLabel then
+				fpsLabel = Instance.new("TextLabel", billboardGui)
+				fpsLabel.Size = UDim2.new(1, 0, 1, 0)
+				fpsLabel.BackgroundTransparency = 1
+				fpsLabel.TextScaled = true
+				fpsLabel.TextColor3 = Color3.new(1, 1, 1)
+				fpsLabel.Font = Enum.Font.SourceSansBold
+			end
+			
+			-- Start updating the FPS display
+			spawn(function()
+				while character and character.Parent do
+					fpsLabel.Text = "FPS: " .. math.random(targetFPS - 3, targetFPS)
+					wait(updateFrequency)
+				end
+			end)
+		end
+
+		-- Call the function with desired parameters
+		spoofFPS(1000, 0.1)  -- Sets the FPS display to spoof 1000 FPS with a 0.1s update frequency
+	end
+})
+Tab:AddButton({
+	Name = "2000 FPS",
+	Callback = function()
+		-- Function to spoof FPS display
+		local function spoofFPS(targetFPS, updateFrequency)
+			-- Variables
+			local Players = game:GetService("Players")
+			local player = Players.LocalPlayer
+			local character = player.Character or player.CharacterAdded:Wait()
+			local head = character:WaitForChild("Head")
+			
+			-- Find or create BillboardGui
+			local billboardGui = head:FindFirstChildWhichIsA("BillboardGui")
+			if not billboardGui then
+				billboardGui = Instance.new("BillboardGui", head)
+				billboardGui.Size = UDim2.new(3, 0, 3, 0)
+				billboardGui.StudsOffset = Vector3.new(0, 2, 0)
+				billboardGui.Adornee = head
+			end
+
+			-- Find or create the TextLabel
+			local fpsLabel = billboardGui:FindFirstChildWhichIsA("TextLabel")
+			if not fpsLabel then
+				fpsLabel = Instance.new("TextLabel", billboardGui)
+				fpsLabel.Size = UDim2.new(1, 0, 1, 0)
+				fpsLabel.BackgroundTransparency = 1
+				fpsLabel.TextScaled = true
+				fpsLabel.TextColor3 = Color3.new(1, 1, 1)
+				fpsLabel.Font = Enum.Font.SourceSansBold
+			end
+			
+			-- Start updating the FPS display
+			spawn(function()
+				while character and character.Parent do
+					fpsLabel.Text = "FPS: " .. math.random(targetFPS - 3, targetFPS)
+					wait(updateFrequency)
+				end
+			end)
+		end
+
+		-- Call the function with desired parameters
+		spoofFPS(2000, 0.1)  -- Sets the FPS display to spoof 2000 FPS with a 0.1s update frequency
+	end
+})
+Tab:AddButton({
+	Name = "3000 FPS",
+	Callback = function()
+		-- Function to spoof FPS display
+		local function spoofFPS(targetFPS, updateFrequency)
+			-- Variables
+			local Players = game:GetService("Players")
+			local player = Players.LocalPlayer
+			local character = player.Character or player.CharacterAdded:Wait()
+			local head = character:WaitForChild("Head")
+			
+			-- Find or create BillboardGui
+			local billboardGui = head:FindFirstChildWhichIsA("BillboardGui")
+			if not billboardGui then
+				billboardGui = Instance.new("BillboardGui", head)
+				billboardGui.Size = UDim2.new(3, 0, 3, 0)
+				billboardGui.StudsOffset = Vector3.new(0, 2, 0)
+				billboardGui.Adornee = head
+			end
+
+			-- Find or create the TextLabel
+			local fpsLabel = billboardGui:FindFirstChildWhichIsA("TextLabel")
+			if not fpsLabel then
+				fpsLabel = Instance.new("TextLabel", billboardGui)
+				fpsLabel.Size = UDim2.new(1, 0, 1, 0)
+				fpsLabel.BackgroundTransparency = 1
+				fpsLabel.TextScaled = true
+				fpsLabel.TextColor3 = Color3.new(1, 1, 1)
+				fpsLabel.Font = Enum.Font.SourceSansBold
+			end
+			
+			-- Start updating the FPS display
+			spawn(function()
+				while character and character.Parent do
+					fpsLabel.Text = "FPS: " .. math.random(targetFPS - 3, targetFPS)
+					wait(updateFrequency)
+				end
+			end)
+		end
+
+		-- Call the function with desired parameters
+		spoofFPS(3000, 0.1)  -- Sets the FPS display to spoof 3000 FPS with a 0.1s update frequency
+	end
+})
+Tab:AddButton({
+	Name = "4000 FPS",
+	Callback = function()
+		-- Function to spoof FPS display
+		local function spoofFPS(targetFPS, updateFrequency)
+			-- Variables
+			local Players = game:GetService("Players")
+			local player = Players.LocalPlayer
+			local character = player.Character or player.CharacterAdded:Wait()
+			local head = character:WaitForChild("Head")
+			
+			-- Find or create BillboardGui
+			local billboardGui = head:FindFirstChildWhichIsA("BillboardGui")
+			if not billboardGui then
+				billboardGui = Instance.new("BillboardGui", head)
+				billboardGui.Size = UDim2.new(3, 0, 3, 0)
+				billboardGui.StudsOffset = Vector3.new(0, 2, 0)
+				billboardGui.Adornee = head
+			end
+
+			-- Find or create the TextLabel
+			local fpsLabel = billboardGui:FindFirstChildWhichIsA("TextLabel")
+			if not fpsLabel then
+				fpsLabel = Instance.new("TextLabel", billboardGui)
+				fpsLabel.Size = UDim2.new(1, 0, 1, 0)
+				fpsLabel.BackgroundTransparency = 1
+				fpsLabel.TextScaled = true
+				fpsLabel.TextColor3 = Color3.new(1, 1, 1)
+				fpsLabel.Font = Enum.Font.SourceSansBold
+			end
+			
+			-- Start updating the FPS display
+			spawn(function()
+				while character and character.Parent do
+					fpsLabel.Text = "FPS: " .. math.random(targetFPS - 3, targetFPS)
+					wait(updateFrequency)
+				end
+			end)
+		end
+
+		-- Call the function with desired parameters
+		spoofFPS(4000, 0.1)  -- Sets the FPS display to spoof 4000 FPS with a 0.1s update frequency
+	end
+})
+Tab:AddButton({
+	Name = "5000 FPS",
+	Callback = function()
+		-- Function to spoof FPS display
+		local function spoofFPS(targetFPS, updateFrequency)
+			-- Variables
+			local Players = game:GetService("Players")
+			local player = Players.LocalPlayer
+			local character = player.Character or player.CharacterAdded:Wait()
+			local head = character:WaitForChild("Head")
+			
+			-- Find or create BillboardGui
+			local billboardGui = head:FindFirstChildWhichIsA("BillboardGui")
+			if not billboardGui then
+				billboardGui = Instance.new("BillboardGui", head)
+				billboardGui.Size = UDim2.new(3, 0, 3, 0)
+				billboardGui.StudsOffset = Vector3.new(0, 2, 0)
+				billboardGui.Adornee = head
+			end
+
+			-- Find or create the TextLabel
+			local fpsLabel = billboardGui:FindFirstChildWhichIsA("TextLabel")
+			if not fpsLabel then
+				fpsLabel = Instance.new("TextLabel", billboardGui)
+				fpsLabel.Size = UDim2.new(1, 0, 1, 0)
+				fpsLabel.BackgroundTransparency = 1
+				fpsLabel.TextScaled = true
+				fpsLabel.TextColor3 = Color3.new(1, 1, 1)
+				fpsLabel.Font = Enum.Font.SourceSansBold
+			end
+			
+			-- Start updating the FPS display
+			spawn(function()
+				while character and character.Parent do
+					fpsLabel.Text = "FPS: " .. math.random(targetFPS - 3, targetFPS)
+					wait(updateFrequency)
+				end
+			end)
+		end
+
+		-- Call the function with desired parameters
+		spoofFPS(5000, 0.1)  -- Sets the FPS display to spoof 5000 FPS with a 0.1s update frequency
+	end
+})
+OrionLib:Init()
